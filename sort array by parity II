@@ -1,0 +1,23 @@
+class Solution(object):
+    def sortArrayByParityII(self, nums):
+        a=[]
+        e=[]
+        o=[]
+        ie=0
+        io=0
+        for i in range(len(nums)):
+            if nums[i]%2==0:
+                e.append(nums[i])
+            else:
+                o.append(nums[i])
+        for i in range(len(nums)):
+            if i%2==0:
+                a.append(e[ie])
+                ie=ie+1
+            else:
+                a.append(o[io])
+                io=io+1
+        return a
+
+
+        
