@@ -1,0 +1,10 @@
+class Solution(object):
+    def addToArrayForm(self, num, k):
+        s=""
+        a1=[]
+        for i in num:
+            s=s+str(i)
+        s1=str(int(s)+k)
+        for i in range(len(s1)):
+            a1.append(int(s1[i]))
+        return a1
