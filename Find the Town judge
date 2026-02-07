@@ -1,0 +1,20 @@
+class Solution(object):
+    def findJudge(self, n, trust):
+        t=[]
+        o=[]
+        p=-1
+        if len(trust)==0 and n==2:
+            return -1
+        elif len(trust)==0 and n==1:
+            return 1
+        else:
+            for i in trust:
+                t.append(i[0])
+                if i[1] not in t:
+                    o.append(i[1])
+            for j in o:
+                if j not in t:
+                    if o.count(j)==n-1:
+                        p=j
+                        break
+            return p
