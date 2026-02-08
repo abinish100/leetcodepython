@@ -1,0 +1,5 @@
+class Solution(object):
+    def singleNonDuplicate(self, nums):
+        counter = Counter(nums)
+        s = sorted(nums, key=lambda x: counter[x], reverse=True)
+        return s[-1]
