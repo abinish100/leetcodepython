@@ -1,0 +1,9 @@
+class Solution(object):
+    def uniqueOccurrences(self, arr):
+        s=set(arr)
+        c=[]
+        for i in s:
+            c.append(arr.count(i))
+        if len(c)!=len(set(c)):
+            return False
+        return True
