@@ -1,0 +1,7 @@
+class Solution(object):
+    def minimumCost(self, nums):
+        s=nums[0]
+        nums.remove(nums[0])
+        s1=sorted(nums)
+        return s+s1[0]+s1[1]
+        
