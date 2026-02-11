@@ -1,0 +1,5 @@
+class Solution(object):
+    def kthSmallest(self, matrix, k):
+        n=[i for sub in matrix for i in sub]
+        s=sorted(n)
+        return s[k-1]
