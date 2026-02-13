@@ -1,0 +1,17 @@
+class Solution(object):
+    def dailyTemperatures(self, temperatures):
+        a=[]
+        for i in range(len(temperatures)):
+            c=0
+            for j in range(i+1,len(temperatures)):
+                if temperatures[i]==max(temperatures):
+                    break
+                elif temperatures[i] < temperatures[j]:
+                    c=j-i
+                    break
+                
+            a.append(c)
+                    
+        
+                    
+        return a
