@@ -1,0 +1,21 @@
+class Solution(object):
+    def isOneBitCharacter(self, bits):
+        j=0
+        r=True
+        for i in range(len(bits)):
+            if j==len(bits)-1 and bits[j]==0:
+                    r=True
+                    break
+            elif j==len(bits)-1 and bits[j]==0:
+                    r=False
+                    break
+            elif bits[j]==1 and bits[j+1]==0 or bits[j]==1 and bits[j+1]==1:
+                if j+1==len(bits)-1:
+                    r=False
+                    break
+                else:
+                    j=j+2
+            else:
+                j=j+1
+            
+        return r
