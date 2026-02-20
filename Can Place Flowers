@@ -1,0 +1,28 @@
+class Solution(object):
+    def canPlaceFlowers(self, flowerbed, n):
+        c=0
+        r=False
+        if len(flowerbed)>=2:
+            if flowerbed[0]==0 and flowerbed[1]==0 and n!=0:
+                n=n-1
+                flowerbed[0]=1
+            if flowerbed[-1]==0 and flowerbed[-2]==0 and n!=0:
+                n=n-1
+                flowerbed[-1]=1
+        else:
+            if flowerbed[0]==0:
+                n=n-1
+                flowerbed[0]=1
+                r=True
+        for i in range(len(flowerbed)-2):
+            if n==0:
+                r=  True
+                break
+            elif flowerbed[i]==0 and flowerbed[i+1]==0 and flowerbed[i+2]==0:
+                n=n-1
+                flowerbed[i+1]=1
+        if n==0:
+            r=True
+                
+        return r
+        
