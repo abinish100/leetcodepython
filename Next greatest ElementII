@@ -1,0 +1,13 @@
+class Solution(object):
+    def nextGreaterElements(self, nums):
+        a=[]
+        a1=[]
+        for i in range(len(nums)):
+            e=-1
+            a=nums[i:]+nums[:i]
+            for j in range(len(a)):
+                if nums[i]<a[j]:
+                    e=a[j]
+                    break
+            a1.append(e)
+        return a1
