@@ -1,0 +1,16 @@
+class Solution(object):
+    def strStr(self, haystack, needle):
+        l=len(needle)
+        h=haystack
+        l1=len(h)
+        n=needle
+        c="null"
+        for i in range(0, len(h), 1):
+            if h[i:i+len(n)]==n:
+                c=i
+                return i
+                break
+            else:
+                continue
+        if c=="null":
+            return -1
