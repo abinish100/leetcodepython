@@ -1,0 +1,12 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        s1=""
+        l1=[";",",",":"]
+        for i in range(len(s)):
+            if s[i].isalpha():
+                s1+=s[i].lower()
+            elif s[i] in l1:
+                continue
+            elif s[i].isdigit():
+                s1+=s[i]
+        return s1 == s1[::-1]
