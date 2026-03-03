@@ -1,0 +1,9 @@
+class Solution(object):
+    def largestSumAfterKNegations(self, nums, k):
+        c=0
+        s=sorted(nums)
+        for i in range(k):
+            s=sorted(s)
+            s[0]=-s[0]
+
+        return sum(s)
