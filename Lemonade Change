@@ -1,0 +1,27 @@
+class Solution(object):
+    def lemonadeChange(self, bills):
+        a=[]
+        r=True
+        for i in bills:
+            if i==5:
+                a.append(5)
+            elif i==10:
+                if 5 not in a:
+                    r=False
+                    break
+                else:
+                    a.remove(5)
+                    a.append(10)
+            elif i == 20:
+                if 10 in a and 5 in a:
+                    a.remove(10)
+                    a.remove(5)
+                elif a.count(5) >= 3:
+                    a.remove(5)
+                    a.remove(5)
+                    a.remove(5)
+                else:
+                    r = False
+                    break
+
+        return r
