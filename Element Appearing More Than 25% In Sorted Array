@@ -1,0 +1,6 @@
+class Solution(object):
+    def findSpecialInteger(self, arr):
+        for i in arr:
+            if arr.count(i)>len(arr)*0.25:
+                return i
+                break
