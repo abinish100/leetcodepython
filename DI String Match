@@ -1,0 +1,14 @@
+class Solution(object):
+    def diStringMatch(self, s):
+        n1=0
+        n2=len(s)
+        ind=[]
+        for k in range(len(s)):
+            if s[k]=="D":
+                ind.append(n2)
+                n2=n2-1
+            else:
+                ind.append(n1)
+                n1=n1+1
+        ind.append(n1)
+        return ind
