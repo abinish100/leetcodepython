@@ -1,0 +1,13 @@
+class Solution(object):
+    def prefixesDivBy5(self, nums):
+        bi=""
+        a=[]
+        for i in nums:
+            bi=bi+str(i)
+        for i in range(len(nums)):
+            b=int(bi[0:i+1],2)
+            if b%5==0:
+                a.append(True)
+            else:
+                a.append(False)
+        return a
