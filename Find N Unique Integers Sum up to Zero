@@ -1,0 +1,10 @@
+class Solution(object):
+    def sumZero(self, n):
+        a=[]
+        if n==2:
+            return [-1,1]
+        else:
+            for i in range(n-1):
+                a.append(i)
+            a.append(-sum(a))
+            return a
