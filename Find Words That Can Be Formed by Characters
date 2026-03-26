@@ -1,0 +1,14 @@
+class Solution(object):
+    def countCharacters(self, words, chars):
+        a=0
+        for i in range(len(words)):
+            r=True
+            for j in words[i]:
+                if words[i].count(j)<=chars.count(j):
+                    continue
+                else:
+                    r=False
+                    break
+            if r==True:
+                a=a+len(words[i])
+        return a
