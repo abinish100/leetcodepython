@@ -1,0 +1,14 @@
+class Solution(object):
+    def shortestCompletingWord(self, licensePlate, words):
+        l1=words
+        words.sort(key=len)
+        a=[]
+        s1=""
+        for i in range(len( licensePlate)):
+            if  licensePlate[i].isalpha():
+                s1+= licensePlate[i]
+        for i in l1:
+            if all(i.lower().count(ch.lower()) >= s1.lower().count(ch.lower()) for ch in s1):
+                return i
+
+                break
