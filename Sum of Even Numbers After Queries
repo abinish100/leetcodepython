@@ -1,0 +1,12 @@
+class Solution(object):
+    def sumEvenAfterQueries(self, nums, queries):
+        a=[]
+        ind=0
+        for i in range(len(queries)):
+            e=0
+            nums[queries[i][1]]=queries[i][0]+nums[queries[i][1]]
+            for num in nums :
+                if num % 2 == 0:
+                    e=e+num
+            a.append(e)
+        return a
