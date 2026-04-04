@@ -1,0 +1,16 @@
+class Solution(object):
+    def distanceBetweenBusStops(self, distance, start, destination):
+        a1=0
+        a2=0
+        i=start
+        while i !=destination:
+            a1=a1+distance[i]
+            i=i+1
+            if i>len(distance)-1:
+                i=0
+        j = start
+        while j !=destination:
+            j = (j - 1 + len(distance)) % len(distance)
+            a2=a2+distance[j]
+        m=min(a1,a2)
+        return m
