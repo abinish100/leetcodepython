@@ -1,0 +1,5 @@
+class Solution(object):
+    def arrayRankTransform(self, arr):
+        s = sorted(set(arr))
+        rank = {num: i + 1 for i, num in enumerate(s)}
+        return [rank[i] for i in arr]
