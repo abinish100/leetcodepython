@@ -1,0 +1,15 @@
+class Solution(object):
+    def kWeakestRows(self, mat, k):
+        a=[]
+        a1=[]
+        k1=k
+        for i in mat:
+            a.append(sum(i))
+        s=sorted(a)
+        s1=s[:k]
+        for j in s1:
+            for k in range(len(mat)):
+                if sum(mat[k])==j and k not in a1:
+                    a1.append(k)
+                    break
+        return a1
