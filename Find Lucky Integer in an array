@@ -1,0 +1,11 @@
+class Solution(object):
+    def findLucky(self, arr):
+        s=list(set(arr))
+        s1=sorted(s)
+        s1=s1[::-1]
+        re=-1
+        for i in s1:
+            if arr.count(i) ==i:
+                re=i
+                break
+        return re
