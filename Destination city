@@ -1,0 +1,9 @@
+class Solution(object):
+    def destCity(self, paths):
+        a=[]
+        for i in paths:
+            a.append(i[0])
+        for j in paths:
+            if j[-1] not in a:
+                return j[-1]
+                break
