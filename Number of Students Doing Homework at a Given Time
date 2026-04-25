@@ -1,0 +1,7 @@
+class Solution(object):
+    def busyStudent(self, startTime, endTime, queryTime):
+        v=0
+        for i in range(len(endTime)):
+            if startTime[i]<= queryTime and endTime[i] >=queryTime:
+                v=v+1
+        return v
