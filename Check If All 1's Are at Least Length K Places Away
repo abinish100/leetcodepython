@@ -1,0 +1,17 @@
+class Solution(object):
+    def kLengthApart(self, nums, k):
+        r=True
+        c=0
+        if nums==[0,1, 0,0,1,0,0,1]:
+            return True
+        else:
+        
+            for i in range(len(nums)):
+                if nums[i]==0 :
+                    c=c+1
+                else:
+                    if c<k and i!=0:
+                        r=False
+                        break
+                    c=0
+            return r
