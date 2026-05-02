@@ -1,0 +1,9 @@
+from decimal import Decimal
+
+class Solution(object):
+    def average(self, salary):
+        s = sorted(salary)
+        s.remove(s[0])
+        s.remove(s[-1])
+        avg = sum(map(Decimal, s)) / Decimal(len(s))
+        return float(round(avg, 5))  
