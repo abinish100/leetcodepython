@@ -1,0 +1,10 @@
+class Solution(object):
+    def restoreString(self, s, indices):
+        l=len(s)
+        s1=""
+        for i in range(l):
+            for j in range(l):
+                if indices[j]==i:
+                    s1=s1+s[j]
+                    break
+        return s1
