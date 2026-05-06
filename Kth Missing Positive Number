@@ -1,0 +1,8 @@
+class Solution(object):
+    def findKthPositive(self, arr, k):
+        a=[]
+        for i in range(max(arr)+10000):
+            if i not in arr:
+                a.append(i)
+        return a[k]
+        
