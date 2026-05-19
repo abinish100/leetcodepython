@@ -1,0 +1,10 @@
+class Solution(object):
+    def frequencySort(self, nums):
+        nl=list(reversed(sorted(nums)))
+        a=[]
+        m = max(nums.count(x) for x in nums)
+        for i in range(m):
+            for j in nl:
+                if nums.count(j)==i+1:
+                    a.append(j)
+        return a
