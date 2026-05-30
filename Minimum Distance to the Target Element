@@ -1,0 +1,12 @@
+class Solution(object):
+    def getMinDistance(self, nums, target, start):
+        v=[]
+        for i in range(start,len(nums)):
+            if nums[i]==target:
+                v.append(abs(i-start))
+                break
+        for j in range(start,0,-1):
+            if nums[j]==target:
+                v.append(abs(i-start))
+                break
+        return min(v)
