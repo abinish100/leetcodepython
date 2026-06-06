@@ -1,0 +1,9 @@
+class Solution(object):
+    def shuffle(self, nums, n):
+        a1=nums[:n]
+        a2=nums[n:]
+        a=[]
+        for i in range(n):
+            a.append(a1[i])
+            a.append(a2[i])
+        return a
