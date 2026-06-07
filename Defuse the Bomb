@@ -1,0 +1,47 @@
+class Solution(object):
+    def decrypt(self, code, k):
+        l=len(code)
+        ind=0
+        n=code
+        if k>0:
+            for i in range(l):
+                if i==l-1:
+                    ind=0
+                else:
+                    ind=i+1
+                s=0
+                for j in range(k):
+                    if ind==l-1:
+                        s=s+n[ind]
+                        ind=0
+                    else:
+                        s=s+n[ind]
+                        ind+=1
+                code[i]=s
+            return code
+        elif k==0:
+            code=[0 for _ in code]
+            return code
+        else:
+            for i in range(l):
+                if i==0:
+                    ind=l-1
+                else:
+                    ind=i-1
+                s=0
+                for j in range(-(k)):
+                    if ind==0:
+                        s+=n[ind]
+                        ind=l-1
+                    else:
+                        s+=n[ind]
+                        ind-=1
+                code[i]=s
+            return code
+
+
+        
+                
+
+
+        
