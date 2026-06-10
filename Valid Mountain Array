@@ -1,0 +1,26 @@
+class Solution(object):
+    def validMountainArray(self, arr):
+        l=len(arr)
+        if l<=2:
+            return False
+        elif l!=len(set(arr)) :
+            for i in range(l-1):
+                if arr[i]==arr[i+1]:
+                    return False
+        i = arr.index(max(arr)) 
+        a1 = arr[:i]
+        a2 = arr[i+1:]
+        if not a1 or not a2:
+            return False
+        else:
+            for j in range(len(a1)-1):
+                if a1[j] >= a1[j+1]:
+                    return False
+            for j in range(len(a2)-1):
+                if a2[j] <= a2[j+1]:
+                    return False
+
+            return True
+
+        
+        
