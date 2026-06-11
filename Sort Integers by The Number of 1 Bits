@@ -1,0 +1,18 @@
+class Solution(object):
+    def sortByBits(self, arr):
+        a1=[]
+        a2=sorted(arr)
+        for i in arr:
+            a1.append(bin(i).count("1"))
+        a3=sorted(a1)
+        for i in range(len(a3)):
+            for j in a2:
+                if a3[i]==bin(j).count("1"):
+                    arr[i]=j
+                    a2.remove(j)
+                    break
+        return arr
+
+        
+
+        
