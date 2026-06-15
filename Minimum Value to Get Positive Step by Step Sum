@@ -1,0 +1,21 @@
+class Solution(object):
+    def minStartValue(self, nums):
+        r=False
+        v=1
+        while not r:
+            v1=v
+            r=True
+            for i in nums:
+                v1=v1+i
+                if v1<1:
+                    v+=1
+                    r=False
+                    break
+            if i==len(nums)-1:
+                r=True
+            
+        return v
+        
+
+
+        
