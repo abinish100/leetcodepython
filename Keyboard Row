@@ -1,0 +1,12 @@
+class Solution(object):
+    def findWords(self, words):
+        w1 = set("qwertyuiop")
+        w2 = set("asdfghjkl")
+        w3 = set("zxcvbnm")
+        
+        res = []
+        for word in words:
+            s = set(word.lower())  # unique letters in word
+            if s.issubset(w1) or s.issubset(w2) or s.issubset(w3):
+                res.append(word)
+        return res
