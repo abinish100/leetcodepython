@@ -1,0 +1,20 @@
+class Solution(object):
+    def luckyNumbers(self, matrix):
+        l=[]
+        for i in matrix:
+            r=True
+            v=min(i)
+            j=i.index(v)
+            for k in matrix:
+                if k[j]>v:
+                    r=False
+                    break
+            if r==True:
+                l.append(v)
+                break
+        return l
+
+
+
+        
+        
