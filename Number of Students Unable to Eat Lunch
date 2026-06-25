@@ -1,0 +1,16 @@
+class Solution(object):
+    def countStudents(self, students, sandwiches):
+        while len(sandwiches)!=0  :
+            if sandwiches[0] not in students:
+                break
+            for _ in range(len(students)):
+                if students[0]== sandwiches[0]:
+                    students=students[1:]
+                    sandwiches= sandwiches[1:]
+                else:
+                    students.append(students[0])
+                    students=students[1:]
+        if len(sandwiches)==0:
+            return 0
+        return len(students)
+        
