@@ -1,0 +1,8 @@
+class Solution(object):
+    def isMonotonic(self, nums):
+        s=sorted(nums)
+        s2=s[::-1]
+        if nums==s or nums==s2:
+            return True
+        return False
+        
