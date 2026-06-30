@@ -1,0 +1,19 @@
+class Solution(object):
+    def isCovered(self, ranges, left, right):
+        a=[]
+        r=True
+        for i in range(left,right+1):
+            a.append(i)
+        for j in a:
+            v=False
+            for k in ranges:
+                if j >=k[0] and j<=k[1]:
+                    v=True
+                    break
+            if v==False:
+                r=False
+                break
+
+        return r
+            
+        
