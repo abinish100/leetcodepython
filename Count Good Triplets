@@ -1,0 +1,11 @@
+class Solution(object):
+    def countGoodTriplets(self, arr, a, b, c):
+        l=len(arr)
+        c=0
+        for i in range(l):
+            for j in range(l):
+                 for k in range(l):
+                    if i<j  and j<k:
+                        if abs(arr[i]-arr[j])<=a and abs(arr[i]-arr[k])<=c and abs(arr[k]-arr[j])<=b :
+                            c+=1
+        return c
