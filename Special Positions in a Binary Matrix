@@ -1,0 +1,21 @@
+class Solution(object):
+    def numSpecial(self, mat):
+        l=len(mat)
+        c1=0
+        for i in range(l):
+            if sum(mat[i])==1:
+                for j in range(len(mat[i])):
+                    if  mat[i][j]==1:
+                        ind=j
+                for k in range(len(mat)):
+                    r="t"
+                    if k !=i:
+                        if mat[k][ind]==1:
+                            r="f"
+                            break
+                if r=="t":
+                    c1+=1
+        return c1
+
+                
+        
