@@ -1,0 +1,8 @@
+class Solution(object):
+    def targetIndices(self, nums, target):
+        a=[]
+        s=sorted(nums)
+        for i in range(len(s)):
+            if s[i]==target:
+                a.append(i)
+        return a
