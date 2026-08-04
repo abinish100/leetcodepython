@@ -1,0 +1,24 @@
+class Solution(object):
+    def findClosestNumber(self, nums):
+        s=sorted(nums)
+        if s[0]>=0:
+            return s[0]
+        elif s[-1]<0:
+            return s[-1]
+        else:
+            for i in range(len(nums)):
+                if s[i]>=0:
+                    a1=s[i-1]
+                    a2=s[i]
+                    break
+            if abs(a1)==a2:
+                return a2
+            elif abs(a1)<a2:
+                return a1
+            else:
+                return a2
+
+
+
+
+        
