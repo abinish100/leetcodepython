@@ -1,0 +1,14 @@
+class Solution(object):
+    def minMaxGame(self, nums):
+        while len(nums)!=1:
+            v="mi"
+            v1=[]
+            for i in range(0,len(nums),2):
+                if v=="mi":
+                    v1.append(min(nums[i:i+2]))
+                    v="max"
+                else:
+                    v1.append(max(nums[i:i+2]))
+                    v="mi"
+            nums=v1
+        return nums[0]
