@@ -1,0 +1,7 @@
+class Solution(object):
+    def checkXMatrix(self, grid):
+        l=len(grid)
+        for i in range(l):
+            if grid[i][i] ==0 or grid[i][abs(i-l)-1]==0 or sum(grid[i])!=grid[i][i]+grid[i][abs(i-l)-1] and i!=abs(i-l)-1:  
+                return False
+        return True
