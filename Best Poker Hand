@@ -1,0 +1,16 @@
+class Solution(object):
+    def bestHand(self, ranks, suits):
+        s1=set(ranks)
+        s2=set(suits)
+        if len(s2)==1:
+            return "Flush"
+        r="n"
+        for i in s1:
+            if ranks.count(i)>=3:
+                return "Three of a Kind"
+            if ranks.count(i)==2:
+                r="Pair"
+        if r!="n":
+            return r
+        return "High Card"
+        
