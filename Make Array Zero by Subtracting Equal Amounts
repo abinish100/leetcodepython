@@ -1,0 +1,12 @@
+class Solution(object):
+    def minimumOperations(self, nums):
+        s=sorted(nums)
+        l=len(nums)
+        c=0
+        while sum(s)!=0:
+            ind=s.count(0)
+            v=s[ind]
+            c+=1
+            for i in range(ind,l):
+                s[i]-=v
+        return c
